@@ -32,11 +32,18 @@
             "tsConfig": "tsconfig.app.json",
             "assets": [
               "src/favicon.ico",
-              "src/assets"
+              "src/assets",
+              {
+                "glob": "**/*",
+                "input": "./node_modules/@kolkov/angular-editor/assets/",
+                "output": "./assets/fonts/"
+              }
             ],
             "styles": [
+              "@angular/material/prebuilt-themes/deeppurple-amber.css",
               "src/styles.css"
             ],
+          
             "scripts": [],
             "server": "src/main.server.ts",
             "prerender": true,
@@ -99,12 +106,17 @@
               "src/assets"
             ],
             "styles": [
+              "@angular/material/prebuilt-themes/deeppurple-amber.css",
               "src/styles.css"
             ],
             "scripts": []
           }
+        
         }
       }
     }
+  },
+  "cli": {
+    "analytics": "5511ddbe-ef68-4966-9bf3-c78b74d3b873"
   }
 }
